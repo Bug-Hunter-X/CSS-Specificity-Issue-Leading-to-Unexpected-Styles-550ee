@@ -1,0 +1,13 @@
+One way to resolve the ambiguity and ensure consistent styling is to use more specific selectors or the `!important` flag (use sparingly):
+
+```css
+div p {
+  color: blue;
+}
+
+p {
+  color: red !important; /*Less desirable but can override conflicting styles*/
+}
+```
+
+Alternatively, if you want the nested paragraph to be blue and paragraphs outside divs to be red you can add an extra class and explicitly select it or restructure the HTML.  If you only want one rule, ensure that rule is more specific to avoid conflict.
